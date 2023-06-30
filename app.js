@@ -22,15 +22,15 @@ app.get("/", function(req, res) {
     res.render("home", {
         startingContent: homeStartingContent,
         posts: posts // the first "posts" is just a name that can be changed
-    }); //Entre as chaves passando valor de variável para paragráfo em EJS
+    }); //Between the braces, the values ​​of the variables for paragraph in EJS are passed 
 });
 
 app.get("/about", function(req, res) {
-    res.render("about", {about: aboutContent}); //Entre as chaves passando valor de variável para paragráfo em EJS
+    res.render("about", {about: aboutContent}); //Between the braces, the values ​​of the variables for paragraph in EJS are passed 
 });
 
 app.get("/contact", function(req, res) {
-    res.render("contact", {contact: contactContent}); //Entre as chaves passando valor de variável para paragráfo em EJS
+    res.render("contact", {contact: contactContent}); //Between the braces, the values ​​of the variables for paragraph in EJS are passed 
 });
 
 app.get("/compose", function(req, res) {
