@@ -1,0 +1,28 @@
+
+
+<%- include("partials/header"); -%>
+
+    <h1>Home</h1>
+    
+    <p><%= startingContent %></p>
+    
+    <% posts.forEach(function(e){ %> <%# "e" is equal to posts array elements %>
+    
+        <h1><%= e.title %></h1>
+    
+        <% if (e.content.length >= 100) { %>
+            <p>
+                <%= e.content.substring(0, 150)+ "..." %> 
+                <a href="/posts/<%= e.title %>" style="text-decoration:none"> Read More</a> 
+            </p>
+        <% } else { %>
+            <p>
+                <%= e.content %>
+                <a href="/posts/<%= e.title %>" style="text-decoration:none"> Read More</a>
+            </p>
+        <% } %>
+    
+    <% }); %>
+
+<%- include("partials/footer"); -%>
+
